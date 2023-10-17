@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jessica Grogan Home</title>
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -12,6 +13,7 @@
         padding: 0;
         font-size: 19px; 
     }
+
     header {
         background-color: #d4c1f0;
         /* #3c2e52 */
@@ -123,6 +125,9 @@
         <p>I'm a computer science Ph.D. student at The State University of New York at Buffalo. My advisor is <a href="https://cse.buffalo.edu/faculty/atri/">Atri Rudra</a>.</p> 
         <p>Interested in systems programming and linear algebra with applications in machine learning. </p>
         <p> Email address: jrgrogan@buffalo.edu </p>
+        <p>
+            <a href="https://twitter.com/Jessica_Grogan_">My Twitter, or X?</a>
+        </p>
     </div>
     
     <div id="publications" class="tab-content publications">
@@ -150,9 +155,13 @@
         </ul>
     </div>
 
-    <div id="monarch" class = "tab-content monarch">
+    <!-- <div id="monarch" class = "tab-content monarch">
         <h2>Make the matrices</h2>
-    </div>
+        <input type="number" id="b_val" placeholder="Input block size">
+        <button onclick="displayInput()">Submit</button>
+        <p id="b"></p>
+        <p id="n"></p>
+    </div> -->
 </div>
 
 <script>
@@ -173,8 +182,17 @@
         });
     });
 </script>
-
-</body>
+<script>
+    function displayInput() {
+        const b = document.getElementById('b_val').value;
+        const output_b = document.getElementById('b');
+        output_b.innerText = 'Value of b: ' + b;
+        
+        const n = b*b
+        const output_n = document.getElementById('n');
+        output_n.innerText = 'Value of n (b^2): ' + n;
+    }
+</script>
 
 </body>
 </html>
